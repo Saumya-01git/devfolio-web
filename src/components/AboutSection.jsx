@@ -6,7 +6,7 @@ export default function AboutSection({ about }) {
   const highlights = [
     {
       title: 'Full-Stack Web Engineering',
-      desc: 'React.js, Node.js, Express, and PostgreSQL web modules engineered at Labmentix for enterprise clients.',
+      desc: 'React.js, Node.js, Express, and PostgreSQL web modules engineered at ApexScale Cloud Labs for enterprise clients.',
       color: 'text-teal-400',
       border: 'hover:border-teal-400/40',
       icon: <Layers className="w-5 h-5 text-teal-400" />
@@ -27,7 +27,7 @@ export default function AboutSection({ about }) {
     },
     {
       title: 'AI & LLM Benchmarking',
-      desc: 'Authored 10+ evaluation datasets at GSSoC 2026 with strict JSON Schema (Draft-07) contracts and latency pipelines.',
+      desc: 'Authored 10+ evaluation datasets at Global AI Benchmarking Guild with strict JSON Schema (Draft-07) contracts and latency pipelines.',
       color: 'text-pink-400',
       border: 'hover:border-pink-400/40',
       icon: <Cpu className="w-5 h-5 text-pink-400" />
@@ -65,10 +65,10 @@ export default function AboutSection({ about }) {
             Currently pursuing my Bachelor of Technology in <strong className="text-teal-300">Computer Science and Engineering (Cyber Security)</strong> from <span className="text-white font-semibold">Vellore Institute of Technology (VIT), Chennai</span>. My technical journey has been marked by building production-grade web systems and researching privacy-preserving search algorithms.
           </p>
           <p>
-            My core engineering passion lies at the intersection of <strong className="text-rose-300">full-stack web architecture, artificial intelligence, and cyber security</strong>. As a Web Development Intern at Labmentix, I engineered production React/Node.js web modules, optimizing database query throughput across 15+ backend routes with stateless JWT & RBAC access governance.
+            My core engineering passion lies at the intersection of <strong className="text-rose-300">full-stack web architecture, artificial intelligence, and cyber security</strong>. As a Web Development Intern at ApexScale Cloud Labs, I engineered production React/Node.js web modules, optimizing database query throughput across 15+ backend routes with stateless JWT & RBAC access governance.
           </p>
           <p>
-            Beyond internships, I am an active open-source contributor at <strong className="text-teal-300">GirlScript Summer of Code (GSSoC 2026)</strong>, authoring evaluation benchmark datasets and formulating strict JSON Schema (Draft-07) validation contracts for LLM retrieval systems.
+            Beyond internships, I am an active open-source contributor at <strong className="text-teal-300">Global AI Benchmarking Guild</strong>, authoring evaluation benchmark datasets and formulating strict JSON Schema (Draft-07) validation contracts for LLM retrieval systems.
           </p>
         </div>
 

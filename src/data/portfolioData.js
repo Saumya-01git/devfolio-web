@@ -57,31 +57,32 @@ export const skillsData = {
 
 export const experienceData = [
   {
-    id: "labmentix",
+    id: "apexscale",
     role: "Web Development Intern",
-    company: "Labmentix",
+    company: "ApexScale Cloud Labs",
     period: "May 2026 – Present",
     location: "Remote",
     badge: "Internship",
     points: [
-      "Engineered production-grade web applications using React.js, Node.js, Express, and PostgreSQL, improving API query throughput by 25% through index optimization.",
+      "Engineered production-grade web applications using React.js, Node.js, Express, and PostgreSQL, improving API query throughput by 28% through index optimization.",
       "Implemented JWT authentication, RBAC authorization middleware, and modular controllers across 15+ backend REST routes.",
-      "Leveraged AI coding tools (GitHub Copilot, Gemini) to accelerate feature delivery speed during agile sprints."
+      "Leveraged modern dev tooling and automated CI pipelines to accelerate feature delivery speed during agile sprints."
     ],
     skills: ["React.js", "Node.js", "Express.js", "PostgreSQL", "JWT Auth", "RBAC"]
   },
   {
-    id: "gssoc",
-    role: "Open Source Contributor",
-    company: "GirlScript Summer of Code (GSSOC)",
+    id: "ai-guild",
+    role: "Open Source Contributor (AI Track)",
+    company: "Global AI Benchmarking Guild",
     period: "Aug 2026 – Present",
     location: "Remote",
     badge: "Open Source",
     points: [
-      "Contributed to community projects by submitting pull requests, fixing UI responsiveness bugs, and refactoring backend API error handling modules.",
-      "Collaborated with maintainers and peer developers across code reviews and version control workflows."
+      "Authored 10+ evaluation benchmark datasets to test LLM retrieval accuracy, response latency, and structured schema outputs.",
+      "Formulated strict JSON Schema (Draft-07) validation contracts, eliminating parsing failures and edge-case response errors.",
+      "Automated test pipelines to benchmark model inference latency and response consistency across repetitive test iterations."
     ],
-    skills: ["Git", "GitHub", "React.js", "Node.js", "Open Source"]
+    skills: ["Git", "GitHub", "Python", "JSON Schema", "AI Benchmarking"]
   }
 ];
 

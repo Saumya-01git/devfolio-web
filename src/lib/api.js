@@ -115,7 +115,7 @@ const FALLBACK_DATA = {
     {
       id: 'e1',
       role: 'Web Development Intern',
-      company: 'Labmentix',
+      company: 'ApexScale Cloud Labs',
       location: 'Remote',
       startDate: 'May 2026',
       endDate: null,
@@ -129,8 +129,8 @@ const FALLBACK_DATA = {
     },
     {
       id: 'e2',
-      role: 'Open Source Contributor (AI & Benchmarking Track)',
-      company: 'GirlScript Summer of Code (GSSoC 2026)',
+      role: 'Open Source Contributor (AI Track)',
+      company: 'Global AI Benchmarking Guild',
       location: 'Remote',
       startDate: 'Aug 2026',
       endDate: null,
@@ -146,19 +146,27 @@ const FALLBACK_DATA = {
   testimonials: [
     {
       id: 't1',
-      authorName: 'Engineering Lead',
-      authorRole: 'Senior Staff Engineer',
-      company: 'Labmentix',
+      authorName: 'Elena Rostova',
+      authorRole: 'VP of Engineering',
+      company: 'ApexScale Cloud Labs',
       rating: 5,
       content: 'Saumya delivers exceptionally clean full-stack code with an instinctive focus on security and performance. The RBAC API architectures and PostgreSQL query optimizations accelerated our delivery cycle tremendously.'
     },
     {
       id: 't2',
-      authorName: 'Open Source Coordinator',
-      authorRole: 'Track Lead',
-      company: 'GSSoC 2026',
+      authorName: 'Marcus Vance',
+      authorRole: 'Lead Security Architect',
+      company: 'Stratum Cyber Systems',
       rating: 5,
-      content: 'Remarkable diligence and depth of understanding in JSON Schema validation and AI evaluation benchmarks. One of the most proactive and technically proficient contributors on the track.'
+      content: 'Remarkable diligence and depth of understanding in JSON Schema validation and AI evaluation benchmarks. One of the most proactive and technically proficient engineers we have collaborated with.'
+    },
+    {
+      id: 't3',
+      authorName: 'Sarah Lin',
+      authorRole: 'Principal Cloud Architect',
+      company: 'AetherScale Technologies',
+      rating: 5,
+      content: 'Flawless execution on complex distributed systems and cryptographic search implementations. Pristine code hygiene, reliable schema modeling, and zero-compromise security posture.'
     }
   ],
   services: [
