@@ -47,7 +47,7 @@ export default function BlogSection({ blogs = [] }) {
                   </div>
                 </div>
 
-                <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:via-pink-300 group-hover:to-orange-300 transition leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:via-pink-300 group-hover:to-orange-300 transition leading-snug">
                   {blog.title}
                 </h3>
 
@@ -93,7 +93,7 @@ export default function BlogSection({ blogs = [] }) {
                 <span>•</span>
                 <span className="text-sky-400 font-semibold">{activeArticle.views || 0} total reads</span>
               </div>
-              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
                 {activeArticle.title}
               </h3>
             </div>

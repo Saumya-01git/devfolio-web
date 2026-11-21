@@ -69,7 +69,7 @@ export default function ContactSection({ about }) {
           <div className="lg:col-span-5 space-y-6">
             <div className="glass-panel p-8 sm:p-9 rounded-3xl border border-white/10 space-y-6 shadow-xl shadow-black/40">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-white mb-2">Direct Contact Channels</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Direct Contact Channels</h3>
                 <p className="text-sm text-slate-300">
                   Feel free to reach out directly via email or connect through professional networks.
                 </p>
@@ -232,7 +232,7 @@ export default function ContactSection({ about }) {
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="w-full py-4 px-6 rounded-2xl font-heading font-extrabold text-base sm:text-lg bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white shadow-xl shadow-pink-500/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group cursor-pointer"
+                    className="w-full py-4 px-6 rounded-2xl font-bold text-base bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white shadow-xl shadow-pink-500/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     {status === 'sending' ? (
                       <span>Transmitting message...</span>

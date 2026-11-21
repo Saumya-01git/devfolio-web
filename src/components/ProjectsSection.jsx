@@ -107,7 +107,7 @@ export default function ProjectsSection({ projects = [] }) {
 
                   <h3
                     onClick={() => setActiveProject(project)}
-                    className="font-heading font-extrabold text-white text-2xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-pink-300 transition cursor-pointer"
+                    className="font-bold text-white text-xl sm:text-2xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-pink-300 transition cursor-pointer"
                   >
                     {project.title}
                   </h3>
@@ -186,7 +186,7 @@ export default function ProjectsSection({ projects = [] }) {
 
             <div className="space-y-5">
               <span className="text-xs font-mono text-sky-400 font-bold">/{activeProject.slug}</span>
-              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-white">{activeProject.title}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">{activeProject.title}</h3>
 
               <p className="text-base sm:text-lg text-slate-200 leading-relaxed whitespace-pre-line">
                 {activeProject.content || activeProject.description}

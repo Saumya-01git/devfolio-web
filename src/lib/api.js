@@ -32,33 +32,36 @@ const FALLBACK_DATA = {
   projects: [
     {
       id: 'p1',
-      title: 'Core CMS Engine',
-      slug: 'core-cms-engine',
-      description: 'A custom-built headless CMS and REST API engine built from scratch with Express, Prisma ORM, and PostgreSQL.',
-      tags: ['Node.js', 'Express', 'Prisma', 'PostgreSQL', 'JWT'],
+      title: 'QuizForge AI',
+      slug: 'quizforge-ai',
+      description: 'AI-driven assessment and dynamic quiz platform featuring automated question generation from documents, real-time analytics, and classroom leaderboards.',
+      content: 'QuizForge AI is an intelligent assessment engine designed to generate comprehensive, multi-format quizzes directly from course materials, PDFs, and lecture notes. Features include adaptive difficulty scoring, real-time participant leaderboards, automated explanation generation powered by LLMs, and detailed class performance analytics.',
+      tags: ['Next.js', 'React', 'Node.js', 'OpenAI API', 'PostgreSQL', 'Tailwind CSS'],
       isFeatured: true,
-      demoUrl: 'http://localhost:5000/admin',
-      githubUrl: 'https://github.com/Saumya-01git/core-cms-api'
+      demoUrl: 'https://quizforge-ai.vercel.app',
+      githubUrl: 'https://github.com/Saumya-01git/QuizForge-AI'
     },
     {
       id: 'p2',
-      title: 'DevFolio Luxury Showcase',
-      slug: 'devfolio-web',
-      description: 'Ultra-modern, reactive portfolio frontend with dynamic data binding, glassmorphism design, and SEO optimization.',
-      tags: ['React', 'Vite', 'Tailwind CSS', 'Lucide'],
+      title: 'AetherVault Cloud',
+      slug: 'aethervault-cloud',
+      description: 'Zero-knowledge encrypted cloud storage and file management ecosystem with client-side AES-256-GCM encryption, chunked uploads, and granular sharing.',
+      content: 'AetherVault Cloud provides an enterprise-grade secure file storage platform where encryption keys never leave the client browser. Features include chunked multipart uploads for gigabyte-scale files, end-to-end cryptographic sharing links with expiration timers, granular role-based permissions, and automated cloud sync.',
+      tags: ['React', 'Node.js', 'AWS S3', 'Cryptography', 'Express', 'Prisma'],
       isFeatured: true,
-      demoUrl: '#',
-      githubUrl: 'https://github.com/Saumya-01git/devfolio-web'
+      demoUrl: 'https://aethervault-cloud.vercel.app',
+      githubUrl: 'https://github.com/Saumya-01git/AetherVault-Cloud'
     },
     {
       id: 'p3',
-      title: 'Distributed Event Broker',
-      slug: 'distributed-event-broker',
-      description: 'Low-latency async message broker designed for real-time webhooks, retry pipelines, and high concurrency loads.',
-      tags: ['Go', 'Redis', 'Kafka', 'Docker'],
-      isFeatured: false,
-      demoUrl: '#',
-      githubUrl: 'https://github.com/Saumya-01git'
+      title: 'InsurePulse Core',
+      slug: 'insurepulse-insurance',
+      description: 'End-to-end digital insurance claims and underwriting engine with automated risk assessment, policy tracking, and real-time fraud detection.',
+      content: 'InsurePulse is a high-reliability digital insurance management platform streamlining customer claims from intake to payout. Features include OCR-driven document verification, configurable risk underwriting rules, real-time fraud pattern detection, automated policy renewal pipelines, and an audit-ready compliance ledger.',
+      tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Redis'],
+      isFeatured: true,
+      demoUrl: 'https://insurepulse.vercel.app',
+      githubUrl: 'https://github.com/Saumya-01git/InsurePulse-Insurance'
     }
   ],
   blogs: [

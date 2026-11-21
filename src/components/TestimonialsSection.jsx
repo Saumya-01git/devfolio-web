@@ -10,7 +10,7 @@ export default function TestimonialsSection({ testimonials = [] }) {
       <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-pink-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-300 text-xs font-bold mb-3 tracking-wider uppercase">
@@ -49,7 +49,7 @@ export default function TestimonialsSection({ testimonials = [] }) {
 
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                 <div>
-                  <h4 className="font-heading font-extrabold text-white text-lg sm:text-xl">{t.authorName}</h4>
+                  <h4 className="font-bold text-white text-base sm:text-lg">{t.authorName}</h4>
                   <p className="text-xs sm:text-sm text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-extrabold">
                     {t.authorRole} {t.company ? `• ${t.company}` : ''}
                   </p>

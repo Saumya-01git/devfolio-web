@@ -50,7 +50,7 @@ export default function ExperienceSection({ experience = [] }) {
                     <div className="glass-panel p-7 sm:p-9 rounded-3xl border border-white/10 hover:border-pink-500/40 transition duration-300 space-y-4 shadow-xl shadow-black/50">
                       
                       <div className="flex flex-wrap items-center justify-between gap-2">
-                        <span className="font-heading font-extrabold text-white text-xl sm:text-2xl">{item.role}</span>
+                        <span className="font-bold text-white text-lg sm:text-xl">{item.role}</span>
                         {item.isCurrent && (
                           <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-gradient-to-r from-pink-500/20 to-orange-500/20 text-orange-300 border border-orange-500/30">
                             Present

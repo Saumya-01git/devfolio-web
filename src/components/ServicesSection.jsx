@@ -58,7 +58,7 @@ export default function ServicesSection({ services = [] }) {
                     {s.icon || '🛠️'}
                   </div>
 
-                  <h3 className={`font-heading text-2xl font-extrabold text-white mb-3 ${theme.titleHover} transition`}>
+                  <h3 className={`text-xl font-bold text-white mb-3 ${theme.titleHover} transition`}>
                     {s.title}
                   </h3>
 

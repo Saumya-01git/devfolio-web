@@ -9,7 +9,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        heading: ['"Syne"', '"Outfit"', 'sans-serif'],
+        heading: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
         display: ['"Outfit"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
