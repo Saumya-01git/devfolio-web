@@ -39,22 +39,22 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-lg text-white tracking-tight leading-none group-hover:text-pink-300 transition">
+            <span className="font-heading font-extrabold text-xl text-white tracking-tight leading-none group-hover:text-pink-300 transition">
               Saumya<span className="text-pink-500">.</span>dev
             </span>
-            <span className="text-[10px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-pink-400 to-orange-400">
+            <span className="text-[11px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-pink-400 to-orange-400 font-bold mt-0.5">
               FULL-STACK ARCHITECT
             </span>
           </div>
         </a>
 
         {/* Desktop Nav with Soft Floating Frost */}
-        <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg shadow-black/20">
+        <nav className="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg shadow-black/20">
           {navLinks.map((link, idx) => (
             <a
               key={idx}
               href={link.href}
-              className="px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-sky-500/15 hover:via-pink-500/15 hover:to-orange-500/15 transition duration-200"
+              className="px-4 py-2 rounded-xl text-sm font-medium text-slate-200 hover:text-white hover:bg-gradient-to-r hover:from-sky-500/15 hover:via-pink-500/15 hover:to-orange-500/15 transition duration-200"
             >
               {link.label}
             </a>
@@ -67,15 +67,15 @@ export default function Navbar() {
             href="http://localhost:5000/admin"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition shadow-sm"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition shadow-sm"
           >
             <Sparkles className="w-3.5 h-3.5 text-pink-400" />
             <span>CMS Admin</span>
-            <ExternalLink className="w-3 h-3" />
+            <ExternalLink className="w-3.5 h-3.5" />
           </a>
           <a
             href="#contact"
-            className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 shadow-lg shadow-pink-500/25 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5"
+            className="px-6 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 shadow-lg shadow-pink-500/25 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5"
           >
             Get In Touch
           </a>

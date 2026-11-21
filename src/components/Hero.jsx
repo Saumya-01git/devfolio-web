@@ -22,101 +22,101 @@ export default function Hero({ about }) {
           
           {/* Status Badge with Iridescent Outline */}
           <div className="inline-flex items-center gap-2.5 p-[1px] rounded-full bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 shadow-xl shadow-pink-950/40">
-            <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#080b15]/90 backdrop-blur-xl text-xs font-medium text-slate-200">
-              <span className="relative flex h-2 w-2">
+            <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-[#080b15]/90 backdrop-blur-xl text-sm font-medium text-slate-200">
+              <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span>
               </span>
-              <span className="text-slate-300">Open for cutting-edge engineering opportunities</span>
+              <span className="text-slate-200 font-medium">Open for cutting-edge engineering opportunities</span>
               <span className="text-slate-600">|</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-mono text-[11px] font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-mono text-xs font-bold">
                 Custom CMS Driven
               </span>
             </div>
           </div>
 
-          {/* Main Headline with Vivid Aurora Gradient */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]">
+          {/* Main Headline with Vivid Aurora Gradient and Display Font */}
+          <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.08]">
             Crafting <span className="text-gradient-aurora">resilient systems</span> and extraordinary web experiences.
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-xl text-slate-300/90 max-w-2xl font-normal leading-relaxed">
+          <p className="text-lg sm:text-2xl text-slate-300 max-w-3xl font-normal leading-relaxed">
             {about?.subtitle || 'Full-Stack Engineer specialized in custom headless architectures, microservices, and interactive frontend interfaces.'}
           </p>
 
           {/* CTA Buttons with Sunset Glows */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-5 pt-3">
             <a
               href="#projects"
-              className="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-bold text-sm shadow-xl shadow-pink-500/25 hover:shadow-orange-500/35 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2 group"
+              className="px-9 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-extrabold text-base shadow-xl shadow-pink-500/25 hover:shadow-orange-500/35 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2.5 group"
             >
               <span>Explore Projects</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition" />
             </a>
 
             <a
               href={about?.githubUrl || "https://github.com/Saumya-01git"}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-pink-500/30 transition duration-200 flex items-center gap-2.5"
+              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-pink-500/40 transition duration-200 flex items-center gap-3"
             >
-              <GithubIcon className="w-4 h-4 text-slate-300" />
+              <GithubIcon className="w-5 h-5 text-slate-200" />
               <span>GitHub</span>
             </a>
 
             <a
               href="#contact"
-              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-sky-500/30 transition duration-200 flex items-center gap-2"
+              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-sky-500/40 transition duration-200 flex items-center gap-2.5"
             >
-              <Sparkles className="w-4 h-4 text-pink-400" />
+              <Sparkles className="w-5 h-5 text-pink-400" />
               <span>Let's Talk</span>
             </a>
           </div>
 
           {/* Unique 4-Color Architectural Highlight Pillars */}
-          <div className="pt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl w-full text-left">
+          <div className="pt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl w-full text-left">
             {/* Card 1: Light Blue / Cyan */}
-            <div className="p-4 rounded-2xl glass-card border border-sky-500/20 hover:border-sky-400/50 transition duration-300 flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-sky-500/30">
+            <div className="p-5 rounded-2xl glass-card border border-sky-500/20 hover:border-sky-400/50 transition duration-300 flex items-center gap-3.5 group shadow-lg shadow-black/20">
+              <div className="w-11 h-11 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-sky-500/30">
                 <Layers className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-[11px] text-sky-400 font-semibold uppercase tracking-wider">Architecture</p>
-                <p className="text-sm font-bold text-white">Custom Headless CMS</p>
+                <p className="text-xs text-sky-400 font-bold uppercase tracking-wider">Architecture</p>
+                <p className="text-base font-bold text-white">Custom Headless CMS</p>
               </div>
             </div>
 
             {/* Card 2: Hot Pink */}
-            <div className="p-4 rounded-2xl glass-card border border-pink-500/20 hover:border-pink-400/50 transition duration-300 flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-pink-500/30">
+            <div className="p-5 rounded-2xl glass-card border border-pink-500/20 hover:border-pink-400/50 transition duration-300 flex items-center gap-3.5 group shadow-lg shadow-black/20">
+              <div className="w-11 h-11 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-pink-500/30">
                 <Code2 className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-[11px] text-pink-400 font-semibold uppercase tracking-wider">Modern Stack</p>
-                <p className="text-sm font-bold text-white">React + Vite + Tailwind</p>
+                <p className="text-xs text-pink-400 font-bold uppercase tracking-wider">Modern Stack</p>
+                <p className="text-base font-bold text-white">React + Vite + Tailwind</p>
               </div>
             </div>
 
             {/* Card 3: Warm Orange */}
-            <div className="p-4 rounded-2xl glass-card border border-orange-500/20 hover:border-orange-400/50 transition duration-300 flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-orange-500/30">
+            <div className="p-5 rounded-2xl glass-card border border-orange-500/20 hover:border-orange-400/50 transition duration-300 flex items-center gap-3.5 group shadow-lg shadow-black/20">
+              <div className="w-11 h-11 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-orange-500/30">
                 <Zap className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-[11px] text-orange-400 font-semibold uppercase tracking-wider">Performance</p>
-                <p className="text-sm font-bold text-white">Sub-30ms Engine</p>
+                <p className="text-xs text-orange-400 font-bold uppercase tracking-wider">Performance</p>
+                <p className="text-base font-bold text-white">Sub-30ms Engine</p>
               </div>
             </div>
 
             {/* Card 4: Royal Purple */}
-            <div className="p-4 rounded-2xl glass-card border border-purple-500/20 hover:border-purple-400/50 transition duration-300 flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-purple-500/30">
+            <div className="p-5 rounded-2xl glass-card border border-purple-500/20 hover:border-purple-400/50 transition duration-300 flex items-center gap-3.5 group shadow-lg shadow-black/20">
+              <div className="w-11 h-11 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-purple-500/30">
                 <Cpu className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-[11px] text-purple-400 font-semibold uppercase tracking-wider">Database</p>
-                <p className="text-sm font-bold text-white">PostgreSQL & Prisma</p>
+                <p className="text-xs text-purple-400 font-bold uppercase tracking-wider">Database</p>
+                <p className="text-base font-bold text-white">PostgreSQL & Prisma</p>
               </div>
             </div>
           </div>

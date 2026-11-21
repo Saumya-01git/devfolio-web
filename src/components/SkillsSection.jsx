@@ -37,29 +37,29 @@ export default function SkillsSection({ skills = [] }) {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-3">
-            <Cpu className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Cpu className="w-4 h-4" />
             <span>TECHNICAL MASTERY</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Skills & <span className="text-gradient-cyber">Technologies</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+          <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-2xl leading-relaxed">
             A comprehensive inventory of frameworks, databases, and tooling leveraged to ship production applications.
           </p>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-9 p-2 rounded-2xl glass-card border border-white/10 shadow-lg">
             {categories.map((cat, idx) => {
               const active = selectedCategory === cat;
               return (
                 <button
                   key={idx}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition duration-200 ${
+                  className={`px-5 py-2.5 rounded-xl text-sm font-bold transition duration-200 ${
                     active
                       ? 'bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 text-white shadow-md shadow-pink-500/30'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5'
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {cat}
@@ -70,29 +70,29 @@ export default function SkillsSection({ skills = [] }) {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {filteredSkills.map(skill => {
             const catStyle = getCategoryColor(skill.category);
             return (
               <div
                 key={skill.id}
-                className="glass-panel p-6 rounded-2xl border border-white/5 hover:border-pink-500/40 transition duration-300 group relative overflow-hidden shadow-lg shadow-black/30 hover:-translate-y-1"
+                className="glass-panel p-6 sm:p-7 rounded-2xl border border-white/5 hover:border-pink-500/40 transition duration-300 group relative overflow-hidden shadow-lg shadow-black/30 hover:-translate-y-1"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-lg ${catStyle.bg} ${catStyle.text} border ${catStyle.border}`}>
+                  <span className={`text-xs font-bold px-3 py-1 rounded-lg ${catStyle.bg} ${catStyle.text} border ${catStyle.border}`}>
                     {skill.category}
                   </span>
-                  <span className="font-mono text-xs font-extrabold text-slate-200">
+                  <span className="font-mono text-sm font-extrabold text-slate-100">
                     {skill.proficiency}%
                   </span>
                 </div>
 
-                <h3 className="font-bold text-white text-base group-hover:text-pink-300 transition">
+                <h3 className="font-heading font-bold text-white text-lg group-hover:text-pink-300 transition">
                   {skill.name}
                 </h3>
 
                 {/* Sunset-Aurora Progress Bar */}
-                <div className="w-full h-2 rounded-full bg-slate-900 border border-white/5 mt-4 overflow-hidden p-[1px]">
+                <div className="w-full h-2.5 rounded-full bg-slate-900 border border-white/5 mt-5 overflow-hidden p-[1px]">
                   <div
                     className="h-full bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 rounded-full transition-all duration-700 shadow-sm shadow-pink-500/50"
                     style={{ width: `${skill.proficiency}%` }}

@@ -25,14 +25,14 @@ export default function ProjectsSection({ projects = [] }) {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-pink-500/10 to-orange-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold mb-3">
-              <Briefcase className="w-3.5 h-3.5 text-orange-400" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/10 to-orange-500/10 border border-pink-500/20 text-pink-300 text-xs font-bold mb-3 tracking-wider uppercase">
+              <Briefcase className="w-4 h-4 text-orange-400" />
               <span>SHOWCASE & PRODUCTS</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
               Featured <span className="text-gradient-aurora">Projects</span>
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+            <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
               Systems architecture, custom headless applications, and high-performance user interfaces.
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function ProjectsSection({ projects = [] }) {
           <div className="flex items-center gap-2 p-1.5 rounded-xl glass-card border border-white/10 shadow-lg self-start sm:self-auto">
             <button
               onClick={() => setFilterFeatured(false)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition duration-200 ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
                 !filterFeatured
                   ? 'bg-gradient-to-r from-sky-400 to-pink-500 text-white shadow-md shadow-pink-500/25'
                   : 'text-slate-400 hover:text-white'
@@ -50,7 +50,7 @@ export default function ProjectsSection({ projects = [] }) {
             </button>
             <button
               onClick={() => setFilterFeatured(true)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition duration-200 ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
                 filterFeatured
                   ? 'bg-gradient-to-r from-pink-500 to-orange-400 text-white shadow-md shadow-orange-500/25'
                   : 'text-slate-400 hover:text-white'
@@ -101,30 +101,30 @@ export default function ProjectsSection({ projects = [] }) {
 
                 {/* Content */}
                 <div className="p-6 sm:p-7 space-y-3">
-                  <div className="flex items-center justify-between text-xs font-mono text-sky-400 font-semibold">
+                  <div className="flex items-center justify-between text-xs font-mono text-sky-400 font-bold">
                     <span>/{project.slug}</span>
                   </div>
 
                   <h3
                     onClick={() => setActiveProject(project)}
-                    className="font-extrabold text-white text-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-pink-300 transition cursor-pointer"
+                    className="font-heading font-extrabold text-white text-2xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-pink-300 transition cursor-pointer"
                   >
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-slate-300/90 line-clamp-3 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-300/90 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Tags */}
                   {project.tags && project.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 pt-2">
+                    <div className="flex flex-wrap gap-2 pt-2">
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-slate-900/80 border border-white/5 text-slate-300"
+                          className="text-xs font-mono px-3 py-1 rounded-xl bg-slate-900/90 border border-white/10 text-pink-300 font-medium"
                         >
-                          {tag}
+                          #{tag}
                         </span>
                       ))}
                     </div>
@@ -186,17 +186,17 @@ export default function ProjectsSection({ projects = [] }) {
 
             <div className="space-y-5">
               <span className="text-xs font-mono text-sky-400 font-bold">/{activeProject.slug}</span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">{activeProject.title}</h3>
+              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-white">{activeProject.title}</h3>
 
-              <p className="text-sm sm:text-base text-slate-200 leading-relaxed whitespace-pre-line">
+              <p className="text-base sm:text-lg text-slate-200 leading-relaxed whitespace-pre-line">
                 {activeProject.content || activeProject.description}
               </p>
 
               {activeProject.tags && (
                 <div className="flex flex-wrap gap-2 pt-2">
                   {activeProject.tags.map((t, idx) => (
-                    <span key={idx} className="text-xs font-mono px-3 py-1 rounded-xl bg-slate-900 border border-pink-500/20 text-pink-300 font-medium">
-                      {t}
+                    <span key={idx} className="text-xs font-mono px-3 py-1.5 rounded-xl bg-slate-900 border border-pink-500/20 text-pink-300 font-medium">
+                      #{t}
                     </span>
                   ))}
                 </div>
@@ -208,10 +208,10 @@ export default function ProjectsSection({ projects = [] }) {
                     href={activeProject.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-pink-500/30 transition"
+                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-heading font-extrabold text-sm flex items-center gap-2 shadow-lg shadow-pink-500/30 transition"
                   >
                     <span>Launch Live Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <ExternalLink className="w-4 h-4" />
                   </a>
                 )}
                 {activeProject.githubUrl && (
@@ -219,9 +219,9 @@ export default function ProjectsSection({ projects = [] }) {
                     href={activeProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2.5 rounded-xl glass-card text-slate-200 hover:text-white font-semibold text-xs flex items-center gap-2 border border-white/10 hover:border-pink-500/40 transition"
+                    className="px-6 py-3 rounded-xl glass-card text-slate-200 hover:text-white font-heading font-bold text-sm flex items-center gap-2 border border-white/10 hover:border-pink-500/40 transition"
                   >
-                    <GithubIcon className="w-3.5 h-3.5" />
+                    <GithubIcon className="w-4 h-4" />
                     <span>View Repository</span>
                   </a>
                 )}

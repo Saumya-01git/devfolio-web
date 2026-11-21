@@ -17,13 +17,13 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <span className="font-extrabold text-white text-base">Saumya<span className="text-pink-500">.</span>dev</span>
-              <p className="text-xs text-slate-500">Crafted with custom headless CMS architecture</p>
+              <span className="font-heading font-extrabold text-white text-lg">Saumya<span className="text-pink-500">.</span>dev</span>
+              <p className="text-xs text-slate-400">Crafted with custom headless CMS architecture</p>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400 font-semibold">
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#skills" className="hover:text-white transition">Skills</a>
             <a href="#projects" className="hover:text-white transition">Projects</a>

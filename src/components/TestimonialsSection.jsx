@@ -13,14 +13,14 @@ export default function TestimonialsSection({ testimonials = [] }) {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-300 text-xs font-semibold mb-3">
-            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-300 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
             <span>ENDORSEMENTS & PRAISE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Peer & Client <span className="text-gradient-sunset">Testimonials</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+          <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
             Feedback from engineering leaders, clients, and technical collaborators.
           </p>
         </div>
@@ -42,15 +42,15 @@ export default function TestimonialsSection({ testimonials = [] }) {
                   <MessageSquareQuote className="w-8 h-8 text-slate-700 group-hover:text-pink-500/40 transition" />
                 </div>
 
-                <p className="text-sm sm:text-base text-slate-200 italic leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-slate-200 italic leading-relaxed mb-6">
                   "{t.content}"
                 </p>
               </div>
 
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                 <div>
-                  <h4 className="font-extrabold text-white text-base">{t.authorName}</h4>
-                  <p className="text-xs text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-semibold">
+                  <h4 className="font-heading font-extrabold text-white text-lg sm:text-xl">{t.authorName}</h4>
+                  <p className="text-xs sm:text-sm text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-extrabold">
                     {t.authorRole} {t.company ? `• ${t.company}` : ''}
                   </p>
                 </div>

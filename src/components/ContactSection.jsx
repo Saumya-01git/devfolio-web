@@ -50,14 +50,14 @@ export default function ContactSection({ about }) {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold mb-3">
-            <Mail className="w-3.5 h-3.5 text-orange-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Mail className="w-4 h-4 text-orange-400" />
             <span>DIRECT ENGAGEMENT</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Let's Build <span className="text-gradient-aurora">Together</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+          <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
             Have a project in mind, want to discuss custom CMS architecture, or exploring a new engineering role? Drop me a note!
           </p>
         </div>
@@ -67,10 +67,10 @@ export default function ContactSection({ about }) {
           
           {/* Left Column: Direct Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel p-8 rounded-3xl border border-white/10 space-y-6 shadow-xl shadow-black/40">
+            <div className="glass-panel p-8 sm:p-9 rounded-3xl border border-white/10 space-y-6 shadow-xl shadow-black/40">
               <div>
-                <h3 className="text-lg font-extrabold text-white mb-2">Direct Contact Channels</h3>
-                <p className="text-xs text-slate-400">
+                <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-white mb-2">Direct Contact Channels</h3>
+                <p className="text-sm text-slate-300">
                   Feel free to reach out directly via email or connect through professional networks.
                 </p>
               </div>
@@ -232,14 +232,14 @@ export default function ContactSection({ about }) {
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="w-full py-4 px-6 rounded-2xl font-bold text-sm bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white shadow-xl shadow-pink-500/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group"
+                    className="w-full py-4 px-6 rounded-2xl font-heading font-extrabold text-base sm:text-lg bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white shadow-xl shadow-pink-500/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group cursor-pointer"
                   >
                     {status === 'sending' ? (
                       <span>Transmitting message...</span>
                     ) : (
                       <>
                         <span>Send Message</span>
-                        <Send className="w-4 h-4 group-hover:translate-x-1 transition" />
+                        <Send className="w-5 h-5 group-hover:translate-x-1.5 transition" />
                       </>
                     )}
                   </button>
