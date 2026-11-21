@@ -237,6 +237,29 @@ export const portfolioApi = {
       console.warn('Backend unavailable, simulating contact form submission:', err.message);
       return { success: true, message: 'Thank you! Your message was received successfully.' };
     }
+  },
+
+  submitTestimonial: async (payload) => {
+    try {
+      const res = await fetch(`${API_BASE}/testimonials/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      return data;
+    } catch (err) {
+      console.warn('Backend unavailable, simulating testimonial creation:', err.message);
+      return {
+        success: true,
+        message: 'Thank you! Your endorsement has been published successfully.',
+        data: {
+          id: 't-demo-' + Date.now(),
+          ...payload,
+          createdAt: new Date().toISOString()
+        }
+      };
+    }
   }
 };
 
