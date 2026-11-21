@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal, ExternalLink } from 'lucide-react';
+import { Menu, X, Terminal, ExternalLink, Sparkles } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,50 +26,56 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled
-        ? 'glass-panel py-3.5 shadow-2xl shadow-black/50 border-b border-white/10'
+        ? 'glass-panel py-3.5 shadow-2xl shadow-black/60 border-b border-white/10'
         : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
+        
+        {/* Brand Logo with Aurora Glow */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-600/30 group-hover:scale-105 transition">
-            <Terminal className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-400 via-pink-500 to-amber-400 p-[1.5px] shadow-lg shadow-pink-500/25 group-hover:shadow-sky-400/30 transition duration-300">
+            <div className="w-full h-full bg-[#090c16] rounded-[10px] flex items-center justify-center">
+              <Terminal className="w-5 h-5 text-transparent bg-clip-text bg-gradient-to-tr from-sky-400 to-pink-400" />
+            </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-lg text-white tracking-tight leading-none group-hover:text-indigo-400 transition">
-              Saumya<span className="text-indigo-500">.</span>dev
+            <span className="font-extrabold text-lg text-white tracking-tight leading-none group-hover:text-pink-300 transition">
+              Saumya<span className="text-pink-500">.</span>dev
             </span>
-            <span className="text-[10px] font-mono text-slate-400 tracking-wider">FULL-STACK ENGINEER</span>
+            <span className="text-[10px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-pink-400 to-orange-400">
+              FULL-STACK ARCHITECT
+            </span>
           </div>
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl glass-card border border-white/5">
+        {/* Desktop Nav with Soft Floating Frost */}
+        <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg shadow-black/20">
           {navLinks.map((link, idx) => (
             <a
               key={idx}
               href={link.href}
-              className="px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition"
+              className="px-4 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-gradient-to-r hover:from-sky-500/15 hover:via-pink-500/15 hover:to-orange-500/15 transition duration-200"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* Action button */}
+        {/* Action Button & CMS Badge */}
         <div className="hidden md:flex items-center gap-3">
           <a
             href="http://localhost:5000/admin"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 transition"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition shadow-sm"
           >
+            <Sparkles className="w-3.5 h-3.5 text-pink-400" />
             <span>CMS Admin</span>
             <ExternalLink className="w-3 h-3" />
           </a>
           <a
             href="#contact"
-            className="px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-lg shadow-indigo-600/25 transition"
+            className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 shadow-lg shadow-pink-500/25 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5"
           >
             Get In Touch
           </a>
@@ -103,14 +109,14 @@ export default function Navbar() {
               href="http://localhost:5000/admin"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20"
             >
               Access Custom CMS Panel ↗
             </a>
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="py-2.5 text-center rounded-xl text-xs font-bold bg-indigo-600 text-white"
+              className="py-2.5 text-center rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400"
             >
               Get In Touch
             </a>
@@ -120,4 +126,3 @@ export default function Navbar() {
     </header>
   );
 }
-

@@ -10,7 +10,7 @@ const GithubIcon = ({ className = "w-5 h-5" }) => (
 
 export default function ContactSection({ about }) {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
 
@@ -43,19 +43,19 @@ export default function ContactSection({ about }) {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Ambient Radial Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-indigo-600/10 via-violet-600/10 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
+      {/* Aurora Ambient Mesh Lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-sky-500/12 via-pink-500/12 to-orange-500/12 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-3">
-            <Mail className="w-3.5 h-3.5" />
-            <span>GET IN TOUCH</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold mb-3">
+            <Mail className="w-3.5 h-3.5 text-orange-400" />
+            <span>DIRECT ENGAGEMENT</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Let's Build Something Great
+            Let's Build <span className="text-gradient-aurora">Together</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
             Have a project in mind, want to discuss custom CMS architecture, or exploring a new engineering role? Drop me a note!
@@ -67,19 +67,19 @@ export default function ContactSection({ about }) {
           
           {/* Left Column: Direct Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel p-8 rounded-3xl border border-white/10 space-y-6">
+            <div className="glass-panel p-8 rounded-3xl border border-white/10 space-y-6 shadow-xl shadow-black/40">
               <div>
-                <h3 className="text-lg font-bold text-white mb-2">Direct Contact</h3>
+                <h3 className="text-lg font-extrabold text-white mb-2">Direct Contact Channels</h3>
                 <p className="text-xs text-slate-400">
                   Feel free to reach out directly via email or connect through professional networks.
                 </p>
               </div>
 
               {/* Email Card with 1-click copy */}
-              <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center justify-between">
+              <div className="p-4 rounded-2xl glass-card border border-white/5 hover:border-pink-500/40 transition duration-300 flex items-center justify-between">
                 <div className="truncate mr-3">
-                  <span className="text-[10px] font-mono uppercase text-slate-400 block">Email Address</span>
-                  <a href={`mailto:${contactEmail}`} className="text-sm font-semibold text-indigo-400 hover:underline truncate">
+                  <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Email Address</span>
+                  <a href={`mailto:${contactEmail}`} className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 hover:underline truncate">
                     {contactEmail}
                   </a>
                 </div>
@@ -95,11 +95,11 @@ export default function ContactSection({ about }) {
               {/* Location Card */}
               {about?.location && (
                 <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4" />
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono uppercase text-slate-400 block">Base Location</span>
+                    <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Primary Location</span>
                     <span className="text-sm font-semibold text-white">{about.location}</span>
                   </div>
                 </div>
@@ -107,13 +107,13 @@ export default function ContactSection({ about }) {
 
               {/* Social Buttons */}
               <div className="pt-2">
-                <span className="text-[10px] font-mono uppercase text-slate-400 block mb-3">Social Profiles</span>
+                <span className="text-[10px] font-mono uppercase text-slate-400 block mb-3 font-bold">Social Profiles</span>
                 <div className="flex items-center gap-3">
                   <a
                     href={about?.githubUrl || "https://github.com/Saumya-01git"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-2xl glass-card hover:border-indigo-500/40 text-slate-300 hover:text-white transition"
+                    className="p-3 rounded-2xl glass-card hover:border-pink-500/40 text-slate-300 hover:text-white transition"
                     aria-label="GitHub"
                   >
                     <GithubIcon className="w-5 h-5" />
@@ -123,7 +123,7 @@ export default function ContactSection({ about }) {
                       href={about.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-indigo-500/40 text-xs font-semibold text-slate-300 hover:text-white transition"
+                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-sky-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
                     >
                       LinkedIn ↗
                     </a>
@@ -133,7 +133,7 @@ export default function ContactSection({ about }) {
                       href={about.twitterUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-indigo-500/40 text-xs font-semibold text-slate-300 hover:text-white transition"
+                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-orange-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
                     >
                       Twitter / X ↗
                     </a>
@@ -150,7 +150,7 @@ export default function ContactSection({ about }) {
               
               {status === 'success' ? (
                 <div className="py-12 flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500/20 to-orange-500/20 text-pink-400 flex items-center justify-center border border-pink-500/30">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">Message Delivered!</h3>
@@ -184,7 +184,7 @@ export default function ContactSection({ about }) {
                         value={formData.name}
                         onChange={e => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Jane Doe"
-                        className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition"
                       />
                     </div>
                     <div>
@@ -197,7 +197,7 @@ export default function ContactSection({ about }) {
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         placeholder="jane@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition"
                       />
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export default function ContactSection({ about }) {
                       value={formData.subject}
                       onChange={e => setFormData({ ...formData, subject: e.target.value })}
                       placeholder="Project Inquiry / Architecture Discussion"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition"
                     />
                   </div>
 
@@ -225,20 +225,20 @@ export default function ContactSection({ about }) {
                       value={formData.message}
                       onChange={e => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Describe your project, timeline, or question in detail..."
-                      className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-500 outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="w-full py-4 px-6 rounded-2xl font-bold text-sm bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-xl shadow-indigo-600/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group"
+                    className="w-full py-4 px-6 rounded-2xl font-bold text-sm bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white shadow-xl shadow-pink-500/30 transition duration-200 disabled:opacity-50 flex items-center justify-center gap-2 group"
                   >
                     {status === 'sending' ? (
-                      <span>Delivering message...</span>
+                      <span>Transmitting message...</span>
                     ) : (
                       <>
-                        <span>Transmit Message</span>
+                        <span>Send Message</span>
                         <Send className="w-4 h-4 group-hover:translate-x-1 transition" />
                       </>
                     )}
@@ -255,4 +255,3 @@ export default function ContactSection({ about }) {
     </section>
   );
 }
-

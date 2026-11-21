@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Terminal, Sparkles, Code2, Layers } from 'lucide-react';
+import { ArrowRight, Terminal, Sparkles, Code2, Layers, Cpu, Zap } from 'lucide-react';
 
 const GithubIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -9,51 +9,57 @@ const GithubIcon = ({ className = "w-4 h-4" }) => (
 
 export default function Hero({ about }) {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-      {/* Ambient Lighting & Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-indigo-600/20 via-violet-600/15 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute top-1/3 -right-20 w-80 h-80 bg-violet-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section className="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
+      
+      {/* Aurora Ambient Multi-Color Mesh Lighting */}
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-sky-500/20 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/3 right-1/4 translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-pink-500/18 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-[450px] h-[300px] bg-orange-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+      <div className="absolute top-1/2 right-1/3 w-[500px] h-[350px] bg-purple-600/18 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-7">
           
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-white/10 text-xs font-medium text-slate-300 shadow-xl shadow-indigo-950/40">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="text-slate-400">Available for innovative projects & roles</span>
-            <span className="text-slate-600">|</span>
-            <span className="text-indigo-400 font-mono text-[11px] font-semibold">Custom CMS Powered</span>
+          {/* Status Badge with Iridescent Outline */}
+          <div className="inline-flex items-center gap-2.5 p-[1px] rounded-full bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 shadow-xl shadow-pink-950/40">
+            <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#080b15]/90 backdrop-blur-xl text-xs font-medium text-slate-200">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+              </span>
+              <span className="text-slate-300">Open for cutting-edge engineering opportunities</span>
+              <span className="text-slate-600">|</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-mono text-[11px] font-bold">
+                Custom CMS Driven
+              </span>
+            </div>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
-            Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-violet-300 to-indigo-200">resilient systems</span> and bespoke web experiences.
+          {/* Main Headline with Vivid Aurora Gradient */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]">
+            Crafting <span className="text-gradient-aurora">resilient systems</span> and extraordinary web experiences.
           </h1>
 
-          {/* Subtitle / Bio */}
-          <p className="text-base sm:text-xl text-slate-400 max-w-2xl font-normal leading-relaxed">
+          {/* Subtitle */}
+          <p className="text-base sm:text-xl text-slate-300/90 max-w-2xl font-normal leading-relaxed">
             {about?.subtitle || 'Full-Stack Engineer specialized in custom headless architectures, microservices, and interactive frontend interfaces.'}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
+          {/* CTA Buttons with Sunset Glows */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
               href="#projects"
-              className="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold text-sm shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/40 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2 group"
+              className="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-bold text-sm shadow-xl shadow-pink-500/25 hover:shadow-orange-500/35 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2 group"
             >
               <span>Explore Projects</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition" />
             </a>
 
             <a
               href={about?.githubUrl || "https://github.com/Saumya-01git"}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-white/20 transition duration-200 flex items-center gap-2.5"
+              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-pink-500/30 transition duration-200 flex items-center gap-2.5"
             >
               <GithubIcon className="w-4 h-4 text-slate-300" />
               <span>GitHub</span>
@@ -61,42 +67,56 @@ export default function Hero({ about }) {
 
             <a
               href="#contact"
-              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-white/20 transition duration-200 flex items-center gap-2"
+              className="px-6 py-3.5 rounded-2xl glass-card hover:bg-white/10 text-slate-200 font-semibold text-sm border border-white/10 hover:border-sky-500/30 transition duration-200 flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-indigo-400" />
+              <Sparkles className="w-4 h-4 text-pink-400" />
               <span>Let's Talk</span>
             </a>
           </div>
 
-          {/* Architecture Highlights Pill Row */}
-          <div className="pt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl w-full text-left">
-            <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
-                <Layers className="w-4 h-4" />
+          {/* Unique 4-Color Architectural Highlight Pillars */}
+          <div className="pt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl w-full text-left">
+            {/* Card 1: Light Blue / Cyan */}
+            <div className="p-4 rounded-2xl glass-card border border-sky-500/20 hover:border-sky-400/50 transition duration-300 flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-sky-500/30">
+                <Layers className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Architecture</p>
-                <p className="text-sm font-bold text-white">Headless CMS</p>
+                <p className="text-[11px] text-sky-400 font-semibold uppercase tracking-wider">Architecture</p>
+                <p className="text-sm font-bold text-white">Custom Headless CMS</p>
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center flex-shrink-0">
-                <Terminal className="w-4 h-4" />
+            {/* Card 2: Hot Pink */}
+            <div className="p-4 rounded-2xl glass-card border border-pink-500/20 hover:border-pink-400/50 transition duration-300 flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-pink-500/30">
+                <Code2 className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Stack</p>
-                <p className="text-sm font-bold text-white">React + Node + DB</p>
+                <p className="text-[11px] text-pink-400 font-semibold uppercase tracking-wider">Modern Stack</p>
+                <p className="text-sm font-bold text-white">React + Vite + Tailwind</p>
               </div>
             </div>
 
-            <div className="col-span-2 sm:col-span-1 p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0">
-                <Code2 className="w-4 h-4" />
+            {/* Card 3: Warm Orange */}
+            <div className="p-4 rounded-2xl glass-card border border-orange-500/20 hover:border-orange-400/50 transition duration-300 flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-orange-500/30">
+                <Zap className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Performance</p>
-                <p className="text-sm font-bold text-white">Sub-30ms APIs</p>
+                <p className="text-[11px] text-orange-400 font-semibold uppercase tracking-wider">Performance</p>
+                <p className="text-sm font-bold text-white">Sub-30ms Engine</p>
+              </div>
+            </div>
+
+            {/* Card 4: Royal Purple */}
+            <div className="p-4 rounded-2xl glass-card border border-purple-500/20 hover:border-purple-400/50 transition duration-300 flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition shadow-sm shadow-purple-500/30">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-[11px] text-purple-400 font-semibold uppercase tracking-wider">Database</p>
+                <p className="text-sm font-bold text-white">PostgreSQL & Prisma</p>
               </div>
             </div>
           </div>
@@ -106,4 +126,3 @@ export default function Hero({ about }) {
     </section>
   );
 }
-

@@ -45,7 +45,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#060911] text-slate-100 flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen aurora-bg text-slate-100 flex flex-col justify-between selection:bg-pink-500 selection:text-white relative">
       <Navbar />
       <main className="flex-1">
         <Hero about={about} />

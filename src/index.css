@@ -3,26 +3,57 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #06070d;
+    color: #f1f5f9;
   }
 }
 
-/* Glassmorphism primitives */
+/* Cosmic Aurora Mesh Backgrounds */
+.aurora-bg {
+  background: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.15), transparent 70%),
+    radial-gradient(circle 600px at 80% 20%, rgba(236, 72, 153, 0.12), transparent 70%),
+    radial-gradient(circle 500px at 10% 60%, rgba(249, 115, 22, 0.1), transparent 70%),
+    radial-gradient(circle 700px at 70% 90%, rgba(168, 85, 247, 0.12), transparent 70%),
+    #06070d;
+}
+
+/* Crystal Glassmorphism */
 .glass-panel {
-  background: rgba(11, 16, 29, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(13, 16, 28, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(16, 23, 42, 0.55);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 22, 38, 0.45);
+  backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .glass-card:hover {
-  border-color: rgba(99, 102, 241, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.15);
+  border-color: rgba(236, 72, 153, 0.35);
+  box-shadow: 0 12px 35px -10px rgba(236, 72, 153, 0.15), 0 4px 20px -5px rgba(56, 189, 248, 0.15);
+}
+
+/* Iridescent Gradient Text */
+.text-gradient-aurora {
+  background: linear-gradient(135deg, #38bdf8 0%, #ec4899 45%, #f97316 75%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-sunset {
+  background: linear-gradient(135deg, #f472b6 0%, #fb923c 60%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyber {
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom Scrollbar */
@@ -30,12 +61,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #060911;
+  background: #06070d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: linear-gradient(to bottom, #38bdf8, #ec4899, #f97316);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: linear-gradient(to bottom, #60a5fa, #f472b6, #fb923c);
 }

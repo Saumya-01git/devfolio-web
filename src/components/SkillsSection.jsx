@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Cpu, Layers } from 'lucide-react';
+import { Cpu, Sparkles } from 'lucide-react';
 
 export default function SkillsSection({ skills = [] }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -14,74 +14,96 @@ export default function SkillsSection({ skills = [] }) {
     return skills.filter(s => s.category === selectedCategory);
   }, [skills, selectedCategory]);
 
+  const getCategoryColor = (category) => {
+    switch (category?.toLowerCase()) {
+      case 'frontend':
+        return { text: 'text-sky-400', bg: 'bg-sky-500/10', border: 'border-sky-500/30' };
+      case 'backend':
+        return { text: 'text-pink-400', bg: 'bg-pink-500/10', border: 'border-pink-500/30' };
+      case 'database':
+        return { text: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/30' };
+      default:
+        return { text: 'text-purple-400', bg: 'bg-purple-500/10', border: 'border-purple-500/30' };
+    }
+  };
+
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-slate-950/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 relative overflow-hidden bg-[#070913]/70">
+      {/* Ambient Lighting Orbs */}
+      <div className="absolute top-1/3 -right-20 w-80 h-80 bg-orange-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-sky-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-3">
             <Cpu className="w-3.5 h-3.5" />
-            <span>TECHNICAL PROFICIENCY</span>
+            <span>TECHNICAL MASTERY</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Skills & Technologies
+            Skills & <span className="text-gradient-cyber">Technologies</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
             A comprehensive inventory of frameworks, databases, and tooling leveraged to ship production applications.
           </p>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl glass-card border border-white/5">
-            {categories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition ${
-                  selectedCategory === cat
-                    ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-600/30'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg">
+            {categories.map((cat, idx) => {
+              const active = selectedCategory === cat;
+              return (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition duration-200 ${
+                    active
+                      ? 'bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 text-white shadow-md shadow-pink-500/30'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {filteredSkills.map(skill => (
-            <div
-              key={skill.id}
-              className="glass-panel p-6 rounded-2xl border border-white/5 hover:border-indigo-500/40 transition group relative overflow-hidden"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                  {skill.category}
-                </span>
-                <span className="font-mono text-xs font-bold text-slate-300">
-                  {skill.proficiency}%
-                </span>
-              </div>
+          {filteredSkills.map(skill => {
+            const catStyle = getCategoryColor(skill.category);
+            return (
+              <div
+                key={skill.id}
+                className="glass-panel p-6 rounded-2xl border border-white/5 hover:border-pink-500/40 transition duration-300 group relative overflow-hidden shadow-lg shadow-black/30 hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-lg ${catStyle.bg} ${catStyle.text} border ${catStyle.border}`}>
+                    {skill.category}
+                  </span>
+                  <span className="font-mono text-xs font-extrabold text-slate-200">
+                    {skill.proficiency}%
+                  </span>
+                </div>
 
-              <h3 className="font-bold text-white text-base group-hover:text-indigo-400 transition">
-                {skill.name}
-              </h3>
+                <h3 className="font-bold text-white text-base group-hover:text-pink-300 transition">
+                  {skill.name}
+                </h3>
 
-              {/* Progress bar */}
-              <div className="w-full h-2 rounded-full bg-slate-900 border border-white/5 mt-4 overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-indigo-500 via-indigo-400 to-violet-500 rounded-full transition-all duration-700"
-                  style={{ width: `${skill.proficiency}%` }}
-                ></div>
+                {/* Sunset-Aurora Progress Bar */}
+                <div className="w-full h-2 rounded-full bg-slate-900 border border-white/5 mt-4 overflow-hidden p-[1px]">
+                  <div
+                    className="h-full bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 rounded-full transition-all duration-700 shadow-sm shadow-pink-500/50"
+                    style={{ width: `${skill.proficiency}%` }}
+                  ></div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
     </section>
   );
 }
-
