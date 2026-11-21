@@ -1,43 +1,51 @@
 import React from 'react';
-import { Terminal } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+export default function Footer({ openContactModal, openResumeModal }) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
-    <footer className="border-t border-white/5 py-12 relative overflow-hidden bg-gradient-to-b from-transparent to-[#030408]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+    <footer className="py-12 relative border-t border-slate-200 mt-20 font-sans">
+      <div className="w-full">
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
           
-          {/* Logo & Tagline */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-400 via-pink-500 to-orange-400 p-[1px] shadow-md">
-              <div className="w-full h-full bg-[#080b15] rounded-[11px] flex items-center justify-center text-pink-400">
-                <Terminal className="w-4 h-4" />
-              </div>
-            </div>
-            <div>
-              <span className="font-heading font-extrabold text-white text-lg">Saumya<span className="text-pink-500">.</span>dev</span>
-              <p className="text-xs text-slate-400">Crafted with custom headless CMS architecture</p>
-            </div>
+          {/* Left Column */}
+          <div>
+            <span className="font-heading font-extrabold text-lg text-slate-900">
+              {personalInfo.name}
+            </span>
+            <p className="text-xs text-slate-500 font-mono">B.Tech CSE (Cyber Security) @ VIT Chennai</p>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400 font-semibold">
-            <a href="#about" className="hover:text-white transition">About</a>
-            <a href="#skills" className="hover:text-white transition">Skills</a>
-            <a href="#projects" className="hover:text-white transition">Projects</a>
-            <a href="#experience" className="hover:text-white transition">Experience</a>
-            <a href="#blogs" className="hover:text-white transition">Articles</a>
-            <a href="#contact" className="hover:text-white transition">Contact</a>
-            <a href="http://localhost:5000/admin" target="_blank" rel="noopener noreferrer" className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-bold">CMS Admin ↗</a>
+          {/* Quick Nav Links */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
+            <a href="#about" className="hover:text-[#0084d4] transition-colors">About</a>
+            <a href="#skills" className="hover:text-[#0084d4] transition-colors">Skills</a>
+            <a href="#education" className="hover:text-[#0084d4] transition-colors">Education</a>
+            <a href="#experience" className="hover:text-[#0084d4] transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-[#0084d4] transition-colors">Projects</a>
+            <button onClick={openResumeModal} className="hover:text-[#0084d4] transition-colors">Resume PDF</button>
+            <button onClick={openContactModal} className="hover:text-[#0084d4] transition-colors">Contact</button>
           </div>
 
-          {/* Copyright */}
-          <div className="text-xs text-slate-500">
-            <span>&copy; {currentYear} Saumya. All rights reserved.</span>
-          </div>
+          {/* Right Column */}
+          <button
+            onClick={scrollToTop}
+            className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 shadow-sm transition-all flex items-center gap-2 text-xs font-mono"
+            title="Scroll back to top"
+          >
+            <span>Back to top</span>
+            <ArrowUp className="w-3.5 h-3.5 text-[#0084d4]" />
+          </button>
 
+        </div>
+
+        {/* Bottom Copy Note */}
+        <div className="text-center mt-6 text-xs text-slate-400 font-mono">
+          <span>© {new Date().getFullYear()} {personalInfo.name} • VIT Chennai</span>
         </div>
       </div>
     </footer>

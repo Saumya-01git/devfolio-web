@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Saumya-01git/devfolio-web#readme",
   "dependencies": {
+    "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.77.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

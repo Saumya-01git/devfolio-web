@@ -1,128 +1,143 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal, ExternalLink, Sparkles } from 'lucide-react';
+import { Sparkles, Sun, Moon, FileText, Send, Menu, X, Shield, Terminal, Code } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
-export default function Navbar() {
+export default function Navbar({ darkMode, setDarkMode, openContactModal, openResumeModal }) {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Services', href: '#services' },
-    { label: 'Articles', href: '#blogs' },
-    { label: 'Contact', href: '#contact' },
+    { name: 'About', href: '#about' },
+    { name: 'Terminal', href: '#terminal' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled
-        ? 'glass-panel py-3.5 shadow-2xl shadow-black/60 border-b border-white/10'
-        : 'bg-transparent py-6'
+      scrolled ? 'py-3' : 'py-5'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        
-        {/* Brand Logo with Teal Glow */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-400 via-cyan-400 to-sky-400 p-[1.5px] shadow-lg shadow-teal-500/25 group-hover:shadow-cyan-400/30 transition duration-300">
-            <div className="w-full h-full bg-[#0c121e] rounded-[10px] flex items-center justify-center">
-              <Terminal className="w-5 h-5 text-teal-400" />
+      <div className="container">
+        <nav className="glass-panel px-6 py-3.5 flex items-center justify-between border-white/10 shadow-2xl">
+          {/* Logo Brand */}
+          <a href="#" className="flex items-center gap-3 group text-decoration-none">
+            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-pink-500 to-cyan-400 p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full bg-slate-950/80 rounded-[10px] backdrop-blur-md flex items-center justify-center">
+                <Code className="w-5 h-5 text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-xl text-white tracking-tight leading-none group-hover:text-teal-300 transition">
-              Saumya<span className="text-teal-400">.</span>dev
-            </span>
-            <span className="text-[11px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-300 to-sky-400 font-bold mt-0.5">
-              FULL-STACK & CYBER SECURITY
-            </span>
-          </div>
-        </a>
+            <div>
+              <span className="font-heading font-extrabold text-xl tracking-tight gradient-text">
+                {personalInfo.name}
+              </span>
+              <span className="flex items-center gap-1 text-[10px] font-mono text-purple-400 font-semibold tracking-wider uppercase">
+                <Shield className="w-3 h-3 text-cyan-400 inline" /> SDE & Cyber Sec
+              </span>
+            </div>
+          </a>
 
-        {/* Desktop Nav with Soft Floating Frost */}
-        <nav className="hidden md:flex items-center gap-1.5 p-1.5 rounded-2xl glass-card border border-white/10 shadow-lg shadow-black/20">
-          {navLinks.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.href}
-              className="px-4 py-2 rounded-xl text-sm font-medium text-slate-200 hover:text-white hover:bg-gradient-to-r hover:from-sky-500/15 hover:via-pink-500/15 hover:to-orange-500/15 transition duration-200"
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-md p-1.5 rounded-2xl border border-white/10">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white transition-all duration-200"
+              title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
-              {link.label}
-            </a>
-          ))}
+              {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-purple-400" />}
+            </button>
+
+            {/* Resume Button */}
+            <button
+              onClick={openResumeModal}
+              className="btn-glass-secondary py-2 px-4 text-xs font-semibold"
+            >
+              <FileText className="w-3.5 h-3.5 text-purple-400" />
+              Resume
+            </button>
+
+            {/* Hire Me / Contact Button */}
+            <button
+              onClick={openContactModal}
+              className="btn-glass-primary py-2 px-4 text-xs font-semibold shadow-lg shadow-purple-500/20"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              Let's Connect
+            </button>
+          </div>
+
+          {/* Mobile Toggle */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300"
+            >
+              {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-purple-400" />}
+            </button>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-slate-200"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </nav>
 
-        {/* Action Button & CMS Badge */}
-        <div className="hidden md:flex items-center gap-3">
-          <a
-            href="http://localhost:5000/admin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition shadow-sm"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-            <span>CMS Admin</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 shadow-lg shadow-pink-500/25 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5"
-          >
-            Get In Touch
-          </a>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2.5 rounded-xl glass-card text-slate-300 hover:text-white"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-      </div>
-
-      {/* Mobile Drawer */}
-      {mobileOpen && (
-        <div className="md:hidden glass-panel border-b border-white/10 px-6 py-6 space-y-3">
-          {navLinks.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition"
-            >
-              {link.label}
-            </a>
-          ))}
-          <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
-            <a
-              href="http://localhost:5000/admin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20"
-            >
-              Access Custom CMS Panel ↗
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="py-2.5 text-center rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400"
-            >
-              Get In Touch
-            </a>
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-2 glass-panel p-4 flex flex-col gap-2 border-white/10 animate-fadeIn">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10"
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
+              <button
+                onClick={() => { setMobileMenuOpen(false); openResumeModal(); }}
+                className="btn-glass-secondary justify-center py-2.5 text-sm"
+              >
+                <FileText className="w-4 h-4 text-purple-400" />
+                View Resume PDF
+              </button>
+              <button
+                onClick={() => { setMobileMenuOpen(false); openContactModal(); }}
+                className="btn-glass-primary justify-center py-2.5 text-sm"
+              >
+                <Sparkles className="w-4 h-4" />
+                Let's Connect
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
