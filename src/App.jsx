@@ -8,6 +8,7 @@ import ExperienceSection from './components/ExperienceSection';
 import ServicesSection from './components/ServicesSection';
 import BlogSection from './components/BlogSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { portfolioApi } from './lib/api';
 
@@ -55,6 +56,7 @@ export default function App() {
         <ServicesSection services={services} />
         <BlogSection blogs={blogs} />
         <TestimonialsSection testimonials={testimonials} />
+        <ContactSection about={about} />
       </main>
       <Footer />
     </div>
