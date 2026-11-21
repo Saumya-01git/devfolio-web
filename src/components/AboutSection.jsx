@@ -89,3 +89,4 @@ export default function AboutSection({ about }) {
     </section>
   );
 }
+

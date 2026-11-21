@@ -84,3 +84,4 @@ export default function SkillsSection({ skills = [] }) {
     </section>
   );
 }
+

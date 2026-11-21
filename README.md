@@ -35,7 +35,7 @@ devfolio-web/
 
 - [x] **Day 8: Portfolio Frontend Setup** (`Day 8 completed -> Portfolio Frontend Setup with React, Tailwind and Base Layout`)
 - [x] **Day 9: Fetch Content From CMS** (`Day 9 completed -> Fetch Content From CMS for Dynamic About, Skills and Projects`)
-- [ ] **Day 10: Additional Sections (Blogs, Testimonials, Experience Timeline)**
+- [x] **Day 10: Additional Sections** (`Day 10 completed -> Additional Sections for Blogs, Experience Timeline, Testimonials and Services`)
 - [ ] **Day 11: Contact Form & Backend API Integration**
 - [ ] **Day 12: Deployment (Backend + CMS Admin)**
 - [ ] **Day 13: Deploy Portfolio Frontend**
