@@ -90,3 +90,86 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #C2AFF0, #9191E9, #457EAC);
 }
+
+/* Dynamic Moving Background Effects */
+@keyframes auroraDrift1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, 40px) scale(1.1);
+  }
+}
+
+@keyframes auroraDrift2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -35px) scale(1.15);
+  }
+}
+
+@keyframes auroraDrift3 {
+  0%, 100% {
+    transform: translate(45px, -50px) scale(1.08);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(1);
+  }
+}
+
+.animate-aurora-drift-1 {
+  animation: auroraDrift1 18s ease-in-out infinite;
+}
+
+.animate-aurora-drift-2 {
+  animation: auroraDrift2 24s ease-in-out infinite;
+}
+
+.animate-aurora-drift-3 {
+  animation: auroraDrift3 20s ease-in-out infinite;
+}
+
+/* Cyber Matrix Perspective Grid Overlay */
+.cyber-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(145, 145, 233, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(69, 126, 172, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 92%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 92%);
+}
+
+/* Animated Cyber Scanline Beam that sweeps smoothly */
+@keyframes scanlineSweep {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.cyber-scanline-beam {
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(194, 175, 240, 0.03) 40%,
+    rgba(145, 145, 233, 0.07) 75%,
+    rgba(69, 126, 172, 0.12) 98%,
+    rgba(194, 175, 240, 0.22) 100%
+  );
+  animation: scanlineSweep 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+

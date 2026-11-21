@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TechCanvasBackground from './components/TechCanvasBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
@@ -45,9 +46,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen aurora-bg text-slate-100 flex flex-col justify-between selection:bg-pink-500 selection:text-white relative">
+    <div className="min-h-screen aurora-bg text-slate-100 flex flex-col justify-between selection:bg-[#9191E9] selection:text-white relative">
+      <TechCanvasBackground />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         <Hero about={about} />
         <AboutSection about={about} />
         <SkillsSection skills={skills} />
