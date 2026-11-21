@@ -4,12 +4,11 @@ export const personalInfo = {
   name: "Saumya",
   title: "Computer Science & Engineering Student | Cyber Security",
   subtitles: [
-    "Cyber Security Student",
-    "AI Enthusiast & Developer",
-    "Full-Stack Web Architect",
-    "Cloud Services Enthusiast",
-    "Open-Source Contributor",
-    "Problem-Solving Advocate"
+    "Secure Full-Stack Web Applications",
+    "Cryptographic & Threat Detection Systems",
+    "High-Performance Cloud Architectures",
+    "Scalable REST APIs with Strict RBAC",
+    "Modern Reactive Web Interfaces"
   ],
   bio: "Pursuing B.Tech Computer Science & Engineering (Cyber Security) at VIT Chennai. Engineering production-grade full-stack web applications, AI models, and secure REST APIs.",
   location: "Chennai, Tamil Nadu, India",

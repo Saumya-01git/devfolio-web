@@ -13,11 +13,12 @@ export default function Hero({ about }) {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const roles = personalInfo.subtitles || [
-    "Full-Stack Software Engineer",
-    "Cyber Security Researcher",
-    "Cryptographic Systems Architect",
-    "Open Source Contributor"
+  const roles = [
+    "Secure Full-Stack Web Applications",
+    "Cryptographic & Threat Detection Systems",
+    "High-Performance Cloud Architectures",
+    "Scalable REST APIs with Strict RBAC",
+    "Modern Reactive Web Interfaces"
   ];
 
   useEffect(() => {
