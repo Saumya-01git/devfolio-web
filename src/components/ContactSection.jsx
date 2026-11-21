@@ -43,22 +43,22 @@ export default function ContactSection({ about }) {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Aurora Ambient Mesh Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-sky-500/12 via-pink-500/12 to-orange-500/12 rounded-full blur-[150px] pointer-events-none"></div>
+      {/* Teal-Slate Ambient Mesh Lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-teal-500/12 via-cyan-500/12 to-slate-600/15 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-bold mb-3 tracking-wider uppercase">
-            <Mail className="w-4 h-4 text-orange-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Mail className="w-4 h-4 text-teal-400" />
             <span>DIRECT ENGAGEMENT</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Let's Build <span className="text-gradient-aurora">Together</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
-            Have a project in mind, want to discuss custom CMS architecture, or exploring a new engineering role? Drop me a note!
+            Have a project in mind, want to discuss secure software architecture, or exploring a software engineering role? Drop me a note!
           </p>
         </div>
 
@@ -71,15 +71,15 @@ export default function ContactSection({ about }) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Direct Contact Channels</h3>
                 <p className="text-sm text-slate-300">
-                  Feel free to reach out directly via email or connect through professional networks.
+                  Feel free to reach out directly via email, phone, or connect through professional networks.
                 </p>
               </div>
 
               {/* Email Card with 1-click copy */}
-              <div className="p-4 rounded-2xl glass-card border border-white/5 hover:border-pink-500/40 transition duration-300 flex items-center justify-between">
+              <div className="p-4 rounded-2xl glass-card border border-white/5 hover:border-teal-500/40 transition duration-300 flex items-center justify-between">
                 <div className="truncate mr-3">
                   <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Email Address</span>
-                  <a href={`mailto:${contactEmail}`} className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 hover:underline truncate">
+                  <a href={`mailto:${contactEmail}`} className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400 hover:underline truncate">
                     {contactEmail}
                   </a>
                 </div>
@@ -92,14 +92,29 @@ export default function ContactSection({ about }) {
                 </button>
               </div>
 
+              {/* Phone Card */}
+              {about?.phone && (
+                <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center flex-shrink-0">
+                    <span className="text-base">📞</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Contact Phone</span>
+                    <a href={`tel:${about.phone}`} className="text-sm font-semibold text-white hover:text-teal-300 transition">
+                      {about.phone}
+                    </a>
+                  </div>
+                </div>
+              )}
+
               {/* Location Card */}
               {about?.location && (
                 <div className="p-4 rounded-2xl glass-card border border-white/5 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Primary Location</span>
+                    <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Academic & Base Location</span>
                     <span className="text-sm font-semibold text-white">{about.location}</span>
                   </div>
                 </div>
@@ -113,7 +128,7 @@ export default function ContactSection({ about }) {
                     href={about?.githubUrl || "https://github.com/Saumya-01git"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-2xl glass-card hover:border-pink-500/40 text-slate-300 hover:text-white transition"
+                    className="p-3 rounded-2xl glass-card hover:border-teal-500/40 text-slate-300 hover:text-white transition"
                     aria-label="GitHub"
                   >
                     <GithubIcon className="w-5 h-5" />
@@ -123,7 +138,7 @@ export default function ContactSection({ about }) {
                       href={about.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-sky-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
+                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-cyan-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
                     >
                       LinkedIn ↗
                     </a>
@@ -133,7 +148,7 @@ export default function ContactSection({ about }) {
                       href={about.twitterUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-orange-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
+                      className="px-4 py-2.5 rounded-2xl glass-card hover:border-teal-500/40 text-xs font-semibold text-slate-200 hover:text-white transition"
                     >
                       Twitter / X ↗
                     </a>

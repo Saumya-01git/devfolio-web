@@ -11,45 +11,45 @@ export default function Hero({ about }) {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
       
-      {/* Aurora Ambient Multi-Color Mesh Lighting */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-sky-500/20 rounded-full blur-[140px] pointer-events-none"></div>
-      <div className="absolute top-1/3 right-1/4 translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-pink-500/18 rounded-full blur-[150px] pointer-events-none"></div>
-      <div className="absolute bottom-10 left-1/3 w-[450px] h-[300px] bg-orange-500/15 rounded-full blur-[130px] pointer-events-none"></div>
-      <div className="absolute top-1/2 right-1/3 w-[500px] h-[350px] bg-purple-600/18 rounded-full blur-[150px] pointer-events-none"></div>
+      {/* Teal & Slate Ambient Lighting */}
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[380px] bg-teal-500/16 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-1/3 right-1/4 translate-x-1/2 -translate-y-1/2 w-[550px] h-[380px] bg-cyan-500/15 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-[500px] h-[320px] bg-slate-600/18 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 right-1/3 w-[500px] h-[350px] bg-sky-600/15 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-7">
           
-          {/* Status Badge with Iridescent Outline */}
-          <div className="inline-flex items-center gap-2.5 p-[1px] rounded-full bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 shadow-xl shadow-pink-950/40">
-            <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-[#080b15]/90 backdrop-blur-xl text-sm font-medium text-slate-200">
+          {/* Status Badge with Teal-Cyan Outline */}
+          <div className="inline-flex items-center gap-2.5 p-[1px] rounded-full bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-500 shadow-xl shadow-teal-950/40">
+            <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-[#0d131f]/90 backdrop-blur-xl text-sm font-medium text-slate-200">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-400"></span>
               </span>
-              <span className="text-slate-200 font-medium">Open for cutting-edge engineering opportunities</span>
+              <span className="text-slate-200 font-medium">B.Tech CSE (Cyber Security) @ VIT Chennai</span>
               <span className="text-slate-600">|</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-pink-400 font-mono text-xs font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300 font-mono text-xs font-bold">
                 Custom CMS Driven
               </span>
             </div>
           </div>
 
-          {/* Main Headline with Vivid Aurora Gradient and Display Font */}
+          {/* Main Headline with Vivid Teal-Cyan Gradient and Display Font */}
           <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.08]">
-            Crafting <span className="text-gradient-aurora">resilient systems</span> and extraordinary web experiences.
+            Engineering <span className="text-gradient-aurora">secure systems</span> and scalable web architectures.
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-2xl text-slate-300 max-w-3xl font-normal leading-relaxed">
-            {about?.subtitle || 'Full-Stack Engineer specialized in custom headless architectures, microservices, and interactive frontend interfaces.'}
+            {about?.subtitle || 'Full-Stack Software Engineer with specialized focus on Cyber Security, Cryptography, and high-performance Web APIs.'}
           </p>
 
-          {/* CTA Buttons with Sunset Glows */}
+          {/* CTA Buttons with Teal Glows */}
           <div className="flex flex-wrap items-center justify-center gap-5 pt-3">
             <a
               href="#projects"
-              className="px-9 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 hover:from-sky-300 hover:via-pink-400 hover:to-orange-300 text-white font-extrabold text-base shadow-xl shadow-pink-500/25 hover:shadow-orange-500/35 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2.5 group"
+              className="px-9 py-4 rounded-2xl bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-500 hover:from-teal-300 hover:via-cyan-300 hover:to-sky-400 text-slate-950 font-extrabold text-base shadow-xl shadow-teal-500/25 hover:shadow-cyan-500/35 hover:-translate-y-0.5 transition duration-200 flex items-center gap-2.5 group"
             >
               <span>Explore Projects</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition" />
@@ -59,7 +59,7 @@ export default function Hero({ about }) {
               href={about?.githubUrl || "https://github.com/Saumya-01git"}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-pink-500/40 transition duration-200 flex items-center gap-3"
+              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-teal-400/40 transition duration-200 flex items-center gap-3"
             >
               <GithubIcon className="w-5 h-5 text-slate-200" />
               <span>GitHub</span>
@@ -67,10 +67,10 @@ export default function Hero({ about }) {
 
             <a
               href="#contact"
-              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-sky-500/40 transition duration-200 flex items-center gap-2.5"
+              className="px-7 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-bold text-base border border-white/15 hover:border-cyan-400/40 transition duration-200 flex items-center gap-2.5"
             >
-              <Sparkles className="w-5 h-5 text-pink-400" />
-              <span>Let's Talk</span>
+              <Sparkles className="w-5 h-5 text-teal-400" />
+              <span>Contact Saumya</span>
             </a>
           </div>
 

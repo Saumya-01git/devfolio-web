@@ -18,22 +18,22 @@ export default function ProjectsSection({ projects = [] }) {
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       {/* Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-sky-500/10 via-pink-500/10 to-orange-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-teal-500/12 via-cyan-500/12 to-slate-600/15 rounded-full blur-[160px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/10 to-orange-500/10 border border-pink-500/20 text-pink-300 text-xs font-bold mb-3 tracking-wider uppercase">
-              <Briefcase className="w-4 h-4 text-orange-400" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
+              <Briefcase className="w-4 h-4 text-teal-400" />
               <span>SHOWCASE & PRODUCTS</span>
             </div>
             <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
               Featured <span className="text-gradient-aurora">Projects</span>
             </h2>
             <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
-              Systems architecture, custom headless applications, and high-performance user interfaces.
+              Production web applications, cryptographic research frameworks, and browser security extensions.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function ProjectsSection({ projects = [] }) {
               onClick={() => setFilterFeatured(false)}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
                 !filterFeatured
-                  ? 'bg-gradient-to-r from-sky-400 to-pink-500 text-white shadow-md shadow-pink-500/25'
+                  ? 'bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 shadow-md shadow-teal-500/25'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -52,7 +52,7 @@ export default function ProjectsSection({ projects = [] }) {
               onClick={() => setFilterFeatured(true)}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
                 filterFeatured
-                  ? 'bg-gradient-to-r from-pink-500 to-orange-400 text-white shadow-md shadow-orange-500/25'
+                  ? 'bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 shadow-md shadow-teal-500/25'
                   : 'text-slate-400 hover:text-white'
               }`}
             >

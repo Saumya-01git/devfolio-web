@@ -28,24 +28,24 @@ export default function SkillsSection({ skills = [] }) {
   };
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-[#070913]/70">
+    <section id="skills" className="py-24 relative overflow-hidden bg-[#0c121e]/80">
       {/* Ambient Lighting Orbs */}
-      <div className="absolute top-1/3 -right-20 w-80 h-80 bg-orange-500/10 rounded-full blur-[130px] pointer-events-none"></div>
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-sky-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/3 -right-20 w-80 h-80 bg-teal-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold mb-3 tracking-wider uppercase">
-            <Cpu className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Cpu className="w-4 h-4 text-teal-400" />
             <span>TECHNICAL MASTERY</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Skills & <span className="text-gradient-cyber">Technologies</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-2xl leading-relaxed">
-            A comprehensive inventory of frameworks, databases, and tooling leveraged to ship production applications.
+            Full-stack frameworks, database systems, cryptography algorithms, and AI evaluation tooling from my technical repertoire.
           </p>
 
           {/* Category Tabs */}
@@ -58,7 +58,7 @@ export default function SkillsSection({ skills = [] }) {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-5 py-2.5 rounded-xl text-sm font-bold transition duration-200 ${
                     active
-                      ? 'bg-gradient-to-r from-sky-400 via-pink-500 to-orange-400 text-white shadow-md shadow-pink-500/30'
+                      ? 'bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 shadow-md shadow-teal-500/30'
                       : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                 >

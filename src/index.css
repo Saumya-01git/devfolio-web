@@ -12,7 +12,7 @@
   }
   body {
     font-family: var(--font-sans);
-    background-color: #06070d;
+    background-color: #0c101a;
     color: #f1f5f9;
     letter-spacing: -0.01em;
   }
@@ -28,65 +28,65 @@
   }
 }
 
-/* Cosmic Aurora Mesh Backgrounds */
+/* Charcoal Grey + Luminous Teal Blue Palette */
 .aurora-bg {
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.15), transparent 70%),
-    radial-gradient(circle 600px at 80% 20%, rgba(236, 72, 153, 0.12), transparent 70%),
-    radial-gradient(circle 500px at 10% 60%, rgba(249, 115, 22, 0.1), transparent 70%),
-    radial-gradient(circle 700px at 70% 90%, rgba(168, 85, 247, 0.12), transparent 70%),
-    #06070d;
+    radial-gradient(ellipse 85% 60% at 50% -20%, rgba(20, 184, 166, 0.16), transparent 70%),
+    radial-gradient(circle 650px at 85% 25%, rgba(6, 182, 212, 0.13), transparent 70%),
+    radial-gradient(circle 550px at 10% 65%, rgba(14, 165, 233, 0.10), transparent 70%),
+    radial-gradient(circle 750px at 70% 90%, rgba(45, 212, 191, 0.12), transparent 70%),
+    #0c101a;
 }
 
-/* Crystal Glassmorphism */
+/* Glassmorphism with Slate Grey & Subtle Teal Accents */
 .glass-panel {
-  background: rgba(13, 16, 28, 0.65);
+  background: rgba(15, 22, 36, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(18, 22, 38, 0.45);
+  background: rgba(22, 31, 48, 0.55);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .glass-card:hover {
-  border-color: rgba(236, 72, 153, 0.35);
-  box-shadow: 0 12px 35px -10px rgba(236, 72, 153, 0.15), 0 4px 20px -5px rgba(56, 189, 248, 0.15);
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 12px 35px -10px rgba(20, 184, 166, 0.18), 0 4px 20px -5px rgba(6, 182, 212, 0.15);
 }
 
-/* Iridescent Gradient Text */
+/* Teal-Cyan-Aqua Radiant Text Gradients */
 .text-gradient-aurora {
-  background: linear-gradient(135deg, #38bdf8 0%, #ec4899 45%, #f97316 75%, #a855f7 100%);
+  background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 50%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-sunset {
-  background: linear-gradient(135deg, #f472b6 0%, #fb923c 60%, #fbbf24 100%);
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyber {
-  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+  background: linear-gradient(135deg, #5eead4 0%, #22d3ee 50%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar in Teal Slate */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #06070d;
+  background: #0c101a;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #38bdf8, #ec4899, #f97316);
+  background: linear-gradient(to bottom, #14b8a6, #06b6d4, #0284c7);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #60a5fa, #f472b6, #fb923c);
+  background: linear-gradient(to bottom, #2dd4bf, #22d3ee, #38bdf8);
 }

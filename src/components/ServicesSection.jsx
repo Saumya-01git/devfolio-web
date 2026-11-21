@@ -27,20 +27,20 @@ export default function ServicesSection({ services = [] }) {
   ];
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-[#070913]/70">
+    <section id="services" className="py-24 relative overflow-hidden bg-[#0c121e]/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-sky-500/10 via-pink-500/10 to-orange-500/10 border border-sky-500/20 text-sky-300 text-xs font-bold mb-3 tracking-wider uppercase">
-            <Sparkles className="w-4 h-4 text-pink-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-sky-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
+            <Sparkles className="w-4 h-4 text-teal-400" />
             <span>SOLUTIONS & ARCHITECTURE SERVICES</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
             Services & <span className="text-gradient-aurora">Capabilities</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-xl mt-3 max-w-xl leading-relaxed">
-            From initial database schema blueprints to production deployment and performance optimization.
+            Full-stack application development, RESTful API security, and high-throughput PostgreSQL architectures.
           </p>
         </div>
 

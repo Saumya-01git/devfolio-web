@@ -31,19 +31,19 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Brand Logo with Aurora Glow */}
+        {/* Brand Logo with Teal Glow */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-400 via-pink-500 to-amber-400 p-[1.5px] shadow-lg shadow-pink-500/25 group-hover:shadow-sky-400/30 transition duration-300">
-            <div className="w-full h-full bg-[#090c16] rounded-[10px] flex items-center justify-center">
-              <Terminal className="w-5 h-5 text-transparent bg-clip-text bg-gradient-to-tr from-sky-400 to-pink-400" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-400 via-cyan-400 to-sky-400 p-[1.5px] shadow-lg shadow-teal-500/25 group-hover:shadow-cyan-400/30 transition duration-300">
+            <div className="w-full h-full bg-[#0c121e] rounded-[10px] flex items-center justify-center">
+              <Terminal className="w-5 h-5 text-teal-400" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-xl text-white tracking-tight leading-none group-hover:text-pink-300 transition">
-              Saumya<span className="text-pink-500">.</span>dev
+            <span className="font-heading font-extrabold text-xl text-white tracking-tight leading-none group-hover:text-teal-300 transition">
+              Saumya<span className="text-teal-400">.</span>dev
             </span>
-            <span className="text-[11px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-pink-400 to-orange-400 font-bold mt-0.5">
-              FULL-STACK ARCHITECT
+            <span className="text-[11px] font-mono tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-300 to-sky-400 font-bold mt-0.5">
+              FULL-STACK & CYBER SECURITY
             </span>
           </div>
         </a>
