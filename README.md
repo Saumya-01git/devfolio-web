@@ -37,7 +37,24 @@ devfolio-web/
 - [x] **Day 9: Fetch Content From CMS** (`Day 9 completed -> Fetch Content From CMS for Dynamic About, Skills and Projects`)
 - [x] **Day 10: Additional Sections** (`Day 10 completed -> Additional Sections for Blogs, Experience Timeline, Testimonials and Services`)
 - [x] **Day 11: Contact Form & Backend API Integration** (`Day 11 completed -> Contact Form Integration with Backend API`)
-- [ ] **Day 12: Deployment (Backend + CMS Admin)**
-- [ ] **Day 13: Deploy Portfolio Frontend**
+- [x] **Day 12: Deployment (Backend + CMS Admin)** (`Day 12 completed -> Backend and CMS Admin Deployment Configurations for Render and Railway`)
+- [x] **Day 13: Deploy Portfolio Frontend** (`Day 13 completed -> Portfolio Frontend Deployment Configurations for Vercel and Netlify`)
 - [ ] **Day 14: Final Testing, Polish & Optimization**
+
+---
+
+## 🚀 Deployment Guide
+
+### Deploying on Vercel
+1. Import repository `devfolio-web` into Vercel.
+2. Framework Preset: **Vite**.
+3. Set Environment Variable:
+   - `VITE_API_URL`: Your deployed backend URL (e.g., `https://core-cms-api.onrender.com/api`).
+4. Click **Deploy**. Vercel will build using `vercel.json` rewrite rules.
+
+### Deploying on Netlify
+1. Connect Git repository to Netlify.
+2. Build command: `npm run build`.
+3. Publish directory: `dist`.
+4. The included `public/_redirects` ensures seamless SPA routing.
 
