@@ -18,15 +18,15 @@ export default function ProjectsSection({ projects = [] }) {
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       {/* Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-teal-500/12 via-cyan-500/12 to-slate-600/15 rounded-full blur-[160px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-[#457EAC]/20 via-[#9191E9]/20 to-[#2D5D7B]/25 rounded-full blur-[160px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
-              <Briefcase className="w-4 h-4 text-teal-400" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C2AFF0]/15 border border-[#C2AFF0]/30 text-[#C2AFF0] text-xs font-bold mb-3 tracking-wider uppercase">
+              <Briefcase className="w-4 h-4 text-[#C2AFF0]" />
               <span>SHOWCASE & PRODUCTS</span>
             </div>
             <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
@@ -37,23 +37,23 @@ export default function ProjectsSection({ projects = [] }) {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 p-1.5 rounded-xl glass-card border border-white/10 shadow-lg self-start sm:self-auto">
+          <div className="flex items-center gap-2 p-1.5 rounded-xl glass-card border border-[#C2AFF0]/20 shadow-lg self-start sm:self-auto">
             <button
               onClick={() => setFilterFeatured(false)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-pointer ${
                 !filterFeatured
-                  ? 'bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 shadow-md shadow-teal-500/25'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-gradient-to-r from-[#9191E9] to-[#457EAC] text-white shadow-md shadow-[#9191E9]/30'
+                  : 'text-slate-300 hover:text-white'
               }`}
             >
               All Projects ({projects.length})
             </button>
             <button
               onClick={() => setFilterFeatured(true)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 ${
+              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-pointer ${
                 filterFeatured
-                  ? 'bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 shadow-md shadow-teal-500/25'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-gradient-to-r from-[#9191E9] to-[#457EAC] text-white shadow-md shadow-[#9191E9]/30'
+                  : 'text-slate-300 hover:text-white'
               }`}
             >
               Featured Only

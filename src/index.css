@@ -12,7 +12,7 @@
   }
   body {
     font-family: var(--font-sans);
-    background-color: #0e131d;
+    background-color: #172735;
     color: #f1f5f9;
     letter-spacing: -0.01em;
   }
@@ -28,65 +28,65 @@
   }
 }
 
-/* Graphite Greyish Base + Luminous Teal Blue & Rose Pink Palette */
+/* Palette: Dim Grey (#686868), Mauve (#C2AFF0), Soft Periwinkle (#9191E9), Steel Blue (#457EAC), Baltic Blue (#2D5D7B) */
 .aurora-bg {
   background: 
-    radial-gradient(ellipse 85% 60% at 50% -20%, rgba(20, 184, 166, 0.18), transparent 70%),
-    radial-gradient(circle 650px at 85% 25%, rgba(244, 114, 182, 0.15), transparent 70%),
-    radial-gradient(circle 550px at 10% 65%, rgba(6, 182, 212, 0.14), transparent 70%),
-    radial-gradient(circle 750px at 70% 90%, rgba(251, 113, 133, 0.14), transparent 70%),
-    #0e131d;
+    radial-gradient(ellipse 90% 65% at 50% -20%, rgba(69, 126, 172, 0.35), transparent 70%),
+    radial-gradient(circle 700px at 85% 25%, rgba(194, 175, 240, 0.22), transparent 70%),
+    radial-gradient(circle 600px at 15% 65%, rgba(145, 145, 233, 0.22), transparent 70%),
+    radial-gradient(circle 800px at 70% 90%, rgba(45, 93, 123, 0.35), transparent 70%),
+    #172735;
 }
 
-/* Glassmorphism with Slate Grey & Subtle Teal/Rose Accents */
+/* Frosted Glassmorphism in Baltic Slate & Soft Mauve/Periwinkle Trims */
 .glass-panel {
-  background: rgba(16, 23, 36, 0.75);
+  background: rgba(28, 48, 65, 0.68);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(194, 175, 240, 0.18);
 }
 
 .glass-card {
-  background: rgba(21, 30, 46, 0.6);
+  background: rgba(34, 57, 76, 0.52);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(145, 145, 233, 0.16);
 }
 
 .glass-card:hover {
-  border-color: rgba(45, 212, 191, 0.5);
-  box-shadow: 0 12px 35px -10px rgba(20, 184, 166, 0.2), 0 4px 20px -5px rgba(244, 114, 182, 0.18);
+  border-color: rgba(194, 175, 240, 0.5);
+  box-shadow: 0 16px 40px -10px rgba(45, 93, 123, 0.45), 0 0 25px -5px rgba(145, 145, 233, 0.25);
 }
 
-/* Teal-Cyan & Rose-Pink Iridescent Text Gradients */
+/* Radiant Text Gradients from the 5-color Palette */
 .text-gradient-aurora {
-  background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 45%, #f472b6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #C2AFF0 40%, #9191E9 75%, #457EAC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-sunset {
-  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 45%, #fb7185 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #C2AFF0 35%, #9191E9 70%, #457EAC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyber {
-  background: linear-gradient(135deg, #5eead4 0%, #f472b6 60%, #fda4af 100%);
+  background: linear-gradient(135deg, #e6edff 0%, #C2AFF0 50%, #9191E9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom Scrollbar in Teal-Rose Slate */
+/* Custom Scrollbar in Palette Colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e131d;
+  background: #172735;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #14b8a6, #06b6d4, #f472b6);
+  background: linear-gradient(to bottom, #9191E9, #457EAC, #2D5D7B);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2dd4bf, #38bdf8, #fb7185);
+  background: linear-gradient(to bottom, #C2AFF0, #9191E9, #457EAC);
 }

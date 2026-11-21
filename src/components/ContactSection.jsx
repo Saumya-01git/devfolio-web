@@ -43,15 +43,15 @@ export default function ContactSection({ about }) {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Teal-Slate Ambient Mesh Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-teal-500/12 via-cyan-500/12 to-slate-600/15 rounded-full blur-[150px] pointer-events-none"></div>
+      {/* Palette Ambient Mesh Lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-r from-[#457EAC]/20 via-[#9191E9]/20 to-[#2D5D7B]/25 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-bold mb-3 tracking-wider uppercase">
-            <Mail className="w-4 h-4 text-teal-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C2AFF0]/15 border border-[#C2AFF0]/30 text-[#C2AFF0] text-xs font-bold mb-3 tracking-wider uppercase">
+            <Mail className="w-4 h-4 text-[#C2AFF0]" />
             <span>DIRECT ENGAGEMENT</span>
           </div>
           <h2 className="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
