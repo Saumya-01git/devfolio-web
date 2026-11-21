@@ -34,7 +34,7 @@ devfolio-web/
 ## 🗓 14-Day Roadmap Tracker
 
 - [x] **Day 8: Portfolio Frontend Setup** (`Day 8 completed -> Portfolio Frontend Setup with React, Tailwind and Base Layout`)
-- [ ] **Day 9: Fetch Content From CMS (Dynamic About, Skills, Projects)**
+- [x] **Day 9: Fetch Content From CMS** (`Day 9 completed -> Fetch Content From CMS for Dynamic About, Skills and Projects`)
 - [ ] **Day 10: Additional Sections (Blogs, Testimonials, Experience Timeline)**
 - [ ] **Day 11: Contact Form & Backend API Integration**
 - [ ] **Day 12: Deployment (Backend + CMS Admin)**
