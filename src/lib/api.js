@@ -9,13 +9,13 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const FALLBACK_DATA = {
   about: {
     title: 'Full-Stack Engineer & Cyber Security Specialist',
-    subtitle: 'B.Tech CSE (Cyber Security) @ VIT Chennai (CGPA 8.97). Engineering resilient cloud systems, cryptographic protocols, and reactive web applications.',
+    subtitle: 'B.Tech CSE (Cyber Security) @ VIT Chennai. Engineering resilient cloud systems, cryptographic protocols, and reactive web applications.',
     bio: 'Full-Stack Software Engineer with specialized focus on Web Development, Cyber Security, and Cryptography. Proven experience engineering scalable enterprise web modules at Labmentix, authoring LLM benchmarking datasets at GirlScript Summer of Code (GSSoC 2026), and developing novel privacy-preserving search frameworks (DASP/ASPE). Passionate about secure RESTful APIs, PostgreSQL relational modeling, and clean user interfaces.',
     heroImage: null,
     resumeUrl: '#',
-    location: 'VIT Chennai / Muzaffarpur, India',
-    email: 'saumyagarg55555@gmail.com',
-    phone: '+91 9142134544',
+    location: 'Chennai / Remote',
+    email: 'contact@saumya.dev',
+    phone: '+91 98765 43210',
     githubUrl: 'https://github.com/Saumya-01git',
     linkedinUrl: 'https://linkedin.com',
     twitterUrl: 'https://x.com'

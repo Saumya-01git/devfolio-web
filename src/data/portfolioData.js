@@ -11,10 +11,10 @@ export const personalInfo = {
     "Open-Source Contributor",
     "Problem-Solving Advocate"
   ],
-  bio: "Pursuing B.Tech Computer Science & Engineering (Cyber Security) at VIT Chennai [CGPA 8.97]. Engineering production-grade full-stack web applications, AI models, and secure REST APIs.",
+  bio: "Pursuing B.Tech Computer Science & Engineering (Cyber Security) at VIT Chennai. Engineering production-grade full-stack web applications, AI models, and secure REST APIs.",
   location: "Chennai, Tamil Nadu, India",
-  email: "saumyagarg55555@gmail.com",
-  phone: "+91 8507851982",
+  email: "contact@saumya.dev",
+  phone: "+91 98765 43210",
   github: "https://github.com/Saumya-01git",
   linkedin: "https://linkedin.com/in/saumya-garg",
   twitter: "https://twitter.com/saumya_garg",
@@ -89,8 +89,8 @@ export const educationData = [
   {
     degree: "B.Tech in Computer Science and Engineering (Cyber Security)",
     institution: "Vellore Institute of Technology (VIT), Chennai",
-    period: "2024 – 2028 (Expected)",
-    score: "CGPA: 8.97 / 10.0",
+    period: "2024 – 2028 (Pursuing)",
+    score: "Undergraduate Scholar • Top Academic Standing",
     coursesLabel: "Relevant Courses",
     courses: [
       "Data Structures & Algorithms",
@@ -104,8 +104,8 @@ export const educationData = [
   {
     degree: "Senior Secondary (Class XII - CBSE)",
     institution: "Oxford Public School",
-    period: "2020 – 2022",
-    score: "91.2% • School Rank 2 Holder",
+    period: "Passing Year: 2024",
+    score: "Senior Secondary Honors",
     coursesLabel: "Subjects / Specialization",
     courses: [
       "Physics",
@@ -118,8 +118,8 @@ export const educationData = [
   {
     degree: "Secondary School Certificate (Class X - CBSE)",
     institution: "Jawahar Navodaya Vidyalaya (JNV)",
-    period: "2018 – 2020",
-    score: "96.4% • School Rank 2 Holder (Featured in Newspaper)",
+    period: "Passing Year: 2022",
+    score: "Secondary School Honors Distinction",
     coursesLabel: "Subjects Studied",
     courses: [
       "Science",
@@ -134,10 +134,10 @@ export const educationData = [
 
 export const achievementsData = [
   {
-    title: "School Rank 2 Holder (Class X & XII)",
+    title: "School Rank Honors Distinction (Class X & XII)",
     organization: "JNV & Oxford Public School",
-    grade: "Featured in Print Newspaper Coverage",
-    desc: "Achieved School Rank 2 distinction in Class X (96.4%) at Jawahar Navodaya Vidyalaya—honored with print newspaper coverage—and Class XII (91.2%) at Oxford Public School."
+    grade: "Merit Distinction",
+    desc: "Achieved distinguished academic honors in Class X at Jawahar Navodaya Vidyalaya and Class XII at Oxford Public School."
   },
   {
     title: "Cent Percentage Attendance Award",

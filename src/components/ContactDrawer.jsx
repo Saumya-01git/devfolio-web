@@ -3,7 +3,6 @@ import { X, Mail, Phone, Copy, Check, Send, Sparkles, Heart, MessageSquare } fro
 import GithubIcon from './GithubIcon';
 import confetti from 'canvas-confetti';
 import { personalInfo } from '../data/portfolioData';
-import { portfolioApi } from '../lib/api';
 
 export default function ContactDrawer({ isOpen, onClose }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -38,13 +37,8 @@ export default function ContactDrawer({ isOpen, onClose }) {
     setTimeout(() => setCopiedPhone(false), 2500);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await portfolioApi.sendContactMessage(formData);
-    } catch (err) {
-      console.log('Message sending note:', err);
-    }
     setFormSubmitted(true);
     triggerConfetti();
     setTimeout(() => {

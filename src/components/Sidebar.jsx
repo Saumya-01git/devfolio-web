@@ -155,24 +155,11 @@ export default function Sidebar({ openContactModal, openResumeModal, sidebarColl
               <li className="pt-1">
                 <button
                   onClick={() => { setMobileOpen(false); openResumeModal(); }}
-                  className="w-full flex items-center gap-4 py-1 px-1 text-[20px] text-[#a8a9b4] hover:text-white hover:translate-x-1 transition-all text-left font-serif cursor-pointer"
+                  className="w-full flex items-center gap-4 py-1 px-1 text-[20px] text-[#a8a9b4] hover:text-white hover:translate-x-1 transition-all text-left font-serif"
                 >
                   <i className="bx bx-download text-[24px] text-[#6f7180]"></i>
                   <span>Download Resume</span>
                 </button>
-              </li>
-
-              {/* Core CMS Admin Link */}
-              <li className="pt-3 border-t border-white/10">
-                <a
-                  href="http://localhost:5000/admin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center gap-4 py-1 px-1 text-[17px] text-teal-400 hover:text-teal-300 hover:translate-x-1 transition-all text-left font-serif font-bold"
-                >
-                  <i className="bx bx-slider-alt text-[22px] text-teal-400"></i>
-                  <span>CMS Admin ↗</span>
-                </a>
               </li>
             </ul>
           </nav>
